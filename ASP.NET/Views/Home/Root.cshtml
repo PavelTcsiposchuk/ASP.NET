@@ -1,0 +1,23 @@
+﻿@*@Model ASP.NET.Models.Folder*@
+
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta name="viewport" content="width=device-width" />
+	<title></title>
+</head>
+<body>
+	<div>
+		<h6> @Html.Display("Name")</h6>
+		@foreach (var childs in Model.Childs)
+		{
+			<form action="/@Model.Path@childs.Name" method="post">
+				<input name="ID" type="hidden" value="@childs.ID" />
+				<button type="submit">@childs.Name</button>
+			</form>
+			
+		}
+	</div>
+</body>
+</html>
