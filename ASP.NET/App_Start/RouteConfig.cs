@@ -13,20 +13,18 @@ namespace ASP.NET
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
-            
+            routes.MapRoute(
+                name: "Start",
+                url: "Home/Root",
+                    defaults: new { controller = "Home", action = "Root" }
+            );
             routes.MapRoute(
               name: "Test3",
               url: "{something}/{*catchall}",
               defaults: new { controller = "Home", action = "GetFolder" }
-              );
-
+              );            
             routes.MapRoute(
-                name: "Default",
-                url: "{controller}/{action}",
-                    defaults: new { controller = "Home", action = "Root"}
-            );
-            routes.MapRoute(
-               name: "Start",
+               name: "AnotherStart",
                url: "",
                    defaults: new { controller = "Home", action = "Root" }
            );
