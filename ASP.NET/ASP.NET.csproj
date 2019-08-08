@@ -135,6 +135,10 @@
     <Content Include="App_Data\ASP_log.ldf">
       <DependentUpon>ASP.mdf</DependentUpon>
     </Content>
+    <Content Include="ASP.mdf" />
+    <Content Include="ASP_log.ldf">
+      <DependentUpon>ASP.mdf</DependentUpon>
+    </Content>
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
